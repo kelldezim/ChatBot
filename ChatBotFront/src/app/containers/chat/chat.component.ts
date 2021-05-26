@@ -19,7 +19,9 @@ export class ChatComponent {
     this.userName = name;
   }
   callBotApi():void {
-    this.http.post('https://localhost:44387/api/MsgFromUser', this.body).subscribe((response: any) =>{
+    // Please double check your port where API is hosted usually it will be 5001 but if you build your project in VS as default it will be 44387
+    let url: string = "https://localhost:5001/api/MsgFromUser"; 
+    this.http.post(url, this.body).subscribe((response: any) =>{
       let messageDto = new MessageDto(response);
       this.messageList = messageDto.historyDto;
       console.log(messageDto);
