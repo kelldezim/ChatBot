@@ -3,23 +3,24 @@ Chatbot API with option to call external API with some basic Frontend
 
 Developed on machine with tech versions:
 
-npm 6.14.10 
-target .NetFramework: .net5.0
-Angular CLI: 11.1.4
-Node: 14.15.4
-OS: win32 x64
-Angular: 11.1.2
+- npm 6.14.10 
+- target .NetFramework: .net5.0
+- Angular CLI: 11.1.4
+- Node: 14.15.4
+- OS: win32 x64
+- Angular: 11.1.2
 
 
 Available commands to Chatbot (letter case does not matter):
-"hi" - Bot will say Hello
-"bye" Bot will say bye and clear current session conversation history
-"country <countryName> Bot will tell some details about the mentioned country - example: "country spain"
+ - "hi" - Bot will say Hello
+ - "bye" Bot will say bye and clear current session conversation history
+ - "country <country_Name>" Bot will tell some details about the mentioned country - example: "country spain"
 
+**When something does not work!**
 
 Common issues during building angular project ChatBotFront:
-1.
-An unhandled exception occurred: Cannot find module '**@angular/compiler-cli**'
+
+1. An unhandled exception occurred: Cannot find module '**@angular/compiler-cli**'
 Require stack:
 - C:\Users\kelld\node_modules\@ngtools\webpack\src\ivy\plugin.js
 - C:\Users\kelld\node_modules\@ngtools\webpack\src\ivy\index.js
