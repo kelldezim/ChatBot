@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="chatbox" *ngIf="!userName">
+        <h2>Set up username and start chat with the bot</h2>
+        <app-username (userNameEvent)="userNameUpdate($event)" *ngIf="!userName"></app-username>
+    </div>
+    <div class="chatbox" *ngIf="userName">
+        <div>
+            <h1>Chat</h1>
+            <div class="message_list">
+                <div class="chatbox_messages" *ngFor="let msg of messageList">
+                    <div class="user-message">
+                        <div class="message-box">
+                            <p class="username">{{msg.userName}}</p>
+                            <p>{{msg.messageBody}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input class="message-box" type="text" [(ngModel)]="message">
+        <button class="button" (click)="sendMessage()">Send</button>
+    </div>  
+</div>
